@@ -11,4 +11,7 @@ describe('title_case') do
   it('do not capitalize conjuctions') do
     title_case('We are at Epicodus').should(eq('We Are at Epicodus'))
   end
+  it('downcases conjunctions if they arent first or last words of title') do
+    title_case('at Epicodus at').should(eq('At Epicodus At'))
+  end
 end
